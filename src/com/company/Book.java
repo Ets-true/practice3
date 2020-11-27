@@ -3,49 +3,63 @@ package com.company;
 public class Book {
 
     private String author;
-    private String appellation;
-    private int yearofwrit;
+    private String name;
+    private int year;
+    private String genre;
+
 
     public Book() {
-
     }
 
-    public Book(String author, String appellation, int yearofwrit) {
-        this.appellation = appellation;
+    public Book(String author, String name, int year, String genre) {
         this.author = author;
-        this.yearofwrit = yearofwrit;
+        this.name = name;
+        this.year = year;
+        this.genre = genre;
     }
 
-    public String getAuthor() {
-        return author;
-    }
 
     public void setAuthor(String author) {
         this.author = author;
     }
 
-    public String getAppellation() {
-        return appellation;
+    public String getAuthor() {
+        return this.author;
     }
 
-    public void setAppellation(String appellation) {
-        this.appellation = appellation;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getYearofwrit() {
-        return yearofwrit;
+    public String getName() {
+        return this.name;
     }
 
-    public void setYearofwrit(int yearofwrit) {
-        this.yearofwrit = yearofwrit;
+
+    public void setYear(int year) {
+        this.year = year;
     }
+
+    public long getYear() {
+        return this.year;
+    }
+
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getGenre() {
+        return this.genre;
+    }
+
 
     @Override
     public String toString() {
-        return "Book{" +
-                "author='" + author + '\'' +
-                ", appellation='" + appellation + '\'' +
-                ", yearofwrit=" + yearofwrit +
-                '}';
+        String out = "\nAuthor: " + this.author + "\nName: " + this.name + "\nYear: " + this.year
+                + "\nGenre: " + this.genre;
+        return out;
+
     }
 }

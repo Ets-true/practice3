@@ -1,44 +1,53 @@
 package com.company;
 
 public class Human {
+
     private Head head;
     private Leg leg;
-    private  Hand hand;
-    Human() {
-         head = new Head(150,100);
-        leg = new Leg(100,200);
-        hand = new Hand(50, 250);
-    }
+    private Hand hand;
 
-    public Head getHead() {
-        return head;
+
+    public Human() {}
+
+    public Human(Head head, Leg leg, Hand hand) {
+        this.head = head;
+        this.leg = leg;
+        this.hand = hand;
     }
 
     public void setHead(Head head) {
         this.head = head;
     }
 
-    public Leg getLeg() {
-        return leg;
+    public Head getHead() {
+        return this.head;
     }
+
+
 
     public void setLeg(Leg leg) {
         this.leg = leg;
     }
-    public Hand getHand() {
-        return hand;
+    public Leg getLeg() {
+        return this.leg;
     }
 
+
+
     public void setHand(Hand hand) {
-        this.leg = leg;
+        this.hand = hand;
     }
+
+    public Hand getHand() {
+        return this.hand;
+    }
+
 
     @Override
     public String toString() {
-        return "Human{" +
-                "head=" + head.toString() +
-                ", leg=" + leg.toString() +
-                ", hand=" + hand.toString() +
-                '}';
+        return "This is a human has " + this.head + ", a " + this.hand + ", and a " + this.leg;
     }
+
+
+    //Тестирую в Main.java
 }

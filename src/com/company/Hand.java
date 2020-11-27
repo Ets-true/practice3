@@ -1,34 +1,35 @@
 package com.company;
 
 public class Hand {
-    private int health;
-    private int agility;
-    Hand(int health, int agility){
-        this.health = health;
-        this.agility =agility;
-    }
-    public int getHealth(int health){
-        return health;
+    private String clothing;
+    private String clock;
+
+    public Hand() {}
+
+    public Hand(String clothing, String clock) {
+        this.clothing = clothing;
+        this.clock = clock;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void setClothing(String clothing) {
+        this.clothing = clothing;
     }
 
-    public int getAgility(int agility) {
-        return agility;
+    public String getClothing() {
+        return this.clothing;
     }
 
-    public void setAgility(int agility) {
-        this.agility = agility;
+    public void setClock(String clock) {
+        this.clock = clock;
+    }
+
+    public String getClock() {
+        return this.clock;
     }
 
     @Override
     public String toString() {
-        return "Hand{" +
-                "health=" + health +
-                ", agility=" + agility +
-                '}';
+        return "Hand wearing " + this.clothing + " and holding " + this.clock;
     }
-}
 
+}

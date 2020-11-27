@@ -2,33 +2,25 @@ package com.company;
 
 public class Leg {
 
-    private int health;
-    private int strength;
-    Leg(int health, int strength){
-        this.health = health;
-        this.strength = strength;
-    }
-    public int getHealth(int health){
-        return health;
+    private String clothing;
+
+    public Leg() {}
+
+    public Leg(String clothing) {
+        this.clothing = clothing;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void setClothing(String clothing) {
+        this.clothing = clothing;
     }
 
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
+    public String getClothing() {
+        return this.clothing;
     }
 
     @Override
     public String toString() {
-        return "Leg{" +
-                "health=" + health +
-                ", strength=" + strength +
-                '}';
+        return "Leg wearing " + this.clothing;
     }
+
 }
